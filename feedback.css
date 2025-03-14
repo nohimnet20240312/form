@@ -1,0 +1,209 @@
+legend {
+  text-align: left;
+  margin-bottom: 5px;
+  color: #5eae0f;
+}
+
+form {
+  min-width: 300px;
+  max-width: 680px;
+  width: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 10px rgb(206, 206, 206); */
+  padding: 18px;
+}
+fieldset {
+  border: none;
+}
+.fieldset_component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 18px;
+  width: 100%;
+  /* background-color: rebeccapurple; */
+}
+
+label {
+  font-size: 15px;
+  text-transform: capitalize;
+  width: 100%;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: left;
+  color: gray;
+}
+input,
+textarea {
+  padding: 10px;
+  background-color: rgba(223, 223, 223, 0.315);
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(226, 226, 226);
+}
+input,
+textarea,
+select {
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(209, 209, 209);
+  border: none;
+  width: 100%;
+  transition: border-color 0.2s linear;
+}
+input:focus {
+  border-color: #5eae0f;
+  background-color: #eaffd4;
+
+}
+input:focus::placeholder{
+  opacity: 0;
+}
+
+select {
+  width: 100%;
+  border: 1px solid rgb(209, 209, 209);
+  height: 16px;
+}
+
+textarea {
+  height: 40px;
+  padding: 10px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+option {
+  padding: 10px;
+}
+
+#submit,
+#cancel {
+  padding: 0px;
+  background-color: #5eae0f;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 40px;
+  color: white;
+  transition: all 0.2s linear;
+  margin-bottom: 10px;
+}
+#submit:hover,
+#cancel:hover {
+  opacity: 0.7;
+}
+#cancel {
+  background-color: #c6c7c7;
+}
+
+#select_option {
+  height: 40px;
+}
+#select_option_multiple {
+  height: max-content;
+}
+.emoji-rating {
+  display: flex;
+  flex-direction: row;
+}
+.emoji-rating label {
+  padding: 10px;
+  font-size: 22px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.emoji-rating input {
+  display: none;
+}
+.emoji-rating input:checked + label {
+  transform: scale(1.2); /* Enlarges selected emoji */
+  opacity: 1;
+}
+.popup {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  background-color: var(--error);
+  padding: 12px;
+  color: var(--alice-blue);
+  border-radius: 10px;
+}
+.border-red {
+  border-color: #ff0000c4;
+  border-width: 2px;
+}
+.border-red::placeholder {
+  color: red;
+  font-size: 16px;
+}
+#instruction {
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+.popup_container {
+  width: 100vw;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+.req {
+  display: inline;
+  color: var(--error-2);
+  padding: 3px;
+  /* margin: 4px; */
+  height: fit-content;
+  border-radius: 5px;
+  font-size: 22px;
+  font-weight: 300;
+}
+.cta {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 100rem;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #eaffd4;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.cta:hover {
+  background-color: #fff;
+  color: black;
+}
+.cta::after {
+  position: absolute;
+  content: "Hello";
+  background-color: #720909;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  z-index: 1;
+  transition: inherit;
+  display: none;
+}
+.cta:hover::after{
+   width: 100%;
+
+}
+@keyframes cover {
+  from {
+    width: 0%;
+  }
+  50%{
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
